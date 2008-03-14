@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{% head %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title> {% if article %} {{ article.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="generator" content="Mephisto" />
+  <meta name="description" content="Thomas R. 'TomK32' Koll is blogging about his experiences in the daily life as web developer. His current focus is Ruby on Rails." />
+  <meta name="keywords" content="ruby on rails, ruby, web development, webentwickler" />
+  {{ 'main' | stylesheet }}
+  {{ head.feed }}
+{% endhead %}
+<body>
+
+  <div id="wrap">
+    <div id="header"><h1><a href="/">{{ site.title }}</a></h1>
+      <p class="description">{{ site.subtitle }}</p>
+      <div id="about">
+      <img height="100px" src="http://ananasblau.com/assets/2007/11/29/tomk32_0006_thumb.jpg" class="floatright" alt="" />
+      <p><strong>About</strong><br />
+        Thomas R. "TomK32" Koll is blogging about his experiences in the daily life as web developer. His current focus is Ruby on Rails.
+      </p>
+     </div>
+    </div>
+    <div id="content">
+      {{ content_for_layout }}
+    </div>
+    <div id="sidebar">
+      <form method="get" id="sform" action="/search">
+				<input type="text" id="q" value="" name="q" size="15" />
+				<input type="submit" value="go" />
+			</form>
+      {% if site.page_sections  %}
+        <h2>Pages</h2>
+        <ul>
+          {% for page in site.page_sections %}<li>{{ page | link_to_section }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+      <h2>Categories</h2>
+      <ul>
+        {% for category in site.blog_sections %}<li>{{ category | link_to_section  }}</li>{% endfor %}
+      </ul>
+    </div>
+  <div id="footer">&copy; 2007 by Thomas R. Koll. Powered by <a href="http://mephistoblog.com/">Mephisto</a>
+<script type="text/javascript" src="http://103bees.com/bees/?bee=3347&amp;fid=10239"></script>
+</div>
+  </div>
+</body>
+</html>

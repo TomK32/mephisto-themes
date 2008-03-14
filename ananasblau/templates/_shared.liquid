@@ -1,0 +1,41 @@
+{% for article in articles %}
+<div class="entry entry-{{ article.id }}">
+	<h2 class="entrytitle">{{ article | link_to_article }}</h2> 
+	<div class="entrybody">
+	  {% if article.excerpt %}
+	    {{ article.excerpt }}
+	    {% unless mode == 'single' %}
+		  <a href="{{ article.url }}">Read the rest of this entry</a>
+		  {% endunless %}
+		{% else %}
+		  {% unless mode == 'single' %}{{ article.body }}{% endunless %}
+		{% endif %}
+		{% if mode == 'single' %}
+		  {{ article.body }}
+		{% endif %}
+	</div>
+	
+	<div class="entrymeta">
+	<div class="postinfo">
+		<span class="postedby">Posted by {{ article.author.login }}</span> at
+                <span class="date">{{ article.published_at | format_date: 'mdy', true }}</span>
+		<span class="filedto">Filed in {{ article | linked_section_list }}</span>
+	</div>
+	{% unless mode == 'single' %}
+	  {% if article.accept_comments %}<a href="{{ article.url }}#comments" class="commentslink">{{ article.comments_count | pluralize: 'comments' }}  &#187;</a>{% endif %}
+	{% endunless %}
+	</div>
+	
+</div>
+{% endfor %}
+{% if mode == 'single' %}
+<script type="text/javascript">
+    if (typeof window.Delicious == "undefined") window.Delicious = {};
+    Delicious.BLOGBADGE_DEFAULT_CLASS = 'delicious-blogbadge-line';
+</script>
+<script src="http://images.del.icio.us/static/js/blogbadge.js"></script>
+
+  <div class="commentsblock">
+    {% include 'comments' %}
+  </div>
+{% endif %}

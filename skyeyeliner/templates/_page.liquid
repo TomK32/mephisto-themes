@@ -1,0 +1,31 @@
+<div class="entry entry-{{ article.id }}">
+	<div class="entrytitle">
+		<h2>{{ article | link_to_article }}</h2> 
+	</div>
+	<div class="entrybody">
+	  {% if article.excerpt %}
+	    {{ article.excerpt }}
+		{% endif %}
+		  {{ article.body }}
+	</div>
+
+	<div class="entrymeta">
+	<div class="postinfo">
+		<span class="postedby">Posted by {{ article.author.login }}</span> at
+                <span class="date">{{ article.published_at | format_date: 'mdy', true }}</span>
+		<span class="filedto">Filed in {{ article | linked_section_list }}</span>
+	</div>
+	  {% if article.accept_comments %}<a href="{{ article.url }}#comments" class="commentslink">{{ article.comments_count | pluralize: 'comments' }}  &#187;</a>{% endif %}
+	</div>
+
+<script type="text/javascript">
+    if (typeof window.Delicious == "undefined") window.Delicious = {};
+    Delicious.BLOGBADGE_DEFAULT_CLASS = 'delicious-blogbadge-line';
+</script>
+<script src="http://images.del.icio.us/static/js/blogbadge.js"></script>
+
+  <div class="commentsblock">
+    {% include 'comments' %}
+  </div>
+
+</div>

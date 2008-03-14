@@ -1,0 +1,14 @@
+{% for article in section.articles %}
+<div class="entry home">
+  <h2 class="entrytitle">{{ article.title }}</h2>
+   <div class="entrybody">{{article.body}}</div>
+</div>
+{% endfor %}
+
+
+<h2>Latest posts</h2>
+<ul>
+{% for article in site.latest_articles %}
+  <li>{{ article | link_to_article }} in {{ article | linked_section_list }}</li>
+{% endfor %}
+</ul>

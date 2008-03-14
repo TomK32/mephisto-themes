@@ -1,0 +1,7 @@
+{% for article in section.articles %}
+<div class="article">
+  <h2>{{ article | link_to_article }}</h2>
+   <div class="meta">Posted by {{ article.author.login }} | <a href="{{ article.url }}#comments">{{ article.comments_count | pluralize: 'comment' }}</a></div>
+   <div class="article-body">{{article.body}}</div>
+</div>
+{% endfor %}

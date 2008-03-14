@@ -1,0 +1,309 @@
+/*
+Theme Name: ananasblau
+Theme URI: http://ananasblau.com/themes/ananasblau
+Description: A clean, minimalist theme
+Version: 0.1
+Author: Thomas R. "TomK32" Koll
+Author URI: http://ananasblau.com
+*/
+
+/*************************************
+ +Containers
+ *************************************/
+body{
+        border-top:5px solid white;
+        color:#555;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: x-small;
+        line-height:1.5;
+        margin:0;
+        padding:0;
+        text-align:center;
+}
+#wrap{
+        margin:0;
+        text-align:left;
+        width:1100px;
+        font-size: 120%;
+        padding: 0
+        margin: 5px 0 0 0;
+        border-top: 5px solid #BBBBBB;
+}
+#content{
+        font-size:1.2em;
+        float:left;
+        padding:1em 25px 1em 25px;
+        width:750px;
+}
+#sidebar{
+        font-size:1.1em;
+        float:right;
+        padding: 1em 25px 1em 25px;
+        width:250px;
+}
+#header{
+        border-bottom:5px solid #BBB;
+        padding: 25px;
+}
+#footer{
+        border-top:5px solid #BBB;
+        color:#888;
+        clear:both;
+        font-size:0.9em;
+        padding:1em 2em 1em 2em;
+}
+/*************************************
+ +Hn and p
+ *************************************/
+h1, h2, h3{
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-weight:normal;
+        letter-spacing: -1px;
+        margin:0;
+}
+#header h1{
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:3em;
+        margin:0;
+        margin-right:1em;
+}
+#header h1 a{
+        color:#78E830;
+}
+#header h1 a:hover{
+        color:#00CC00;
+}
+#header p{
+        color:#aaa;
+        font-size:1.1em;
+        margin:0;
+        margin-top:-0.5em;
+}
+
+#about {
+       width: 320px;
+       float: right;
+       margin-top: -80px;
+}
+#about h3 {
+       font-weight: bold;
+}
+
+h2.entrytitle {
+        font-size:2.2em;
+        color:#58CC58;
+}
+h2.entrytitle a, h2.entrytitle
+{
+        color:#8BCC8B;
+}
+h2.entrytitle a:hover {
+        color:#58CC58;
+}
+h3.entrytitle {
+        font-size:1.8em;
+        color:#6F6F6F;
+}
+#sidebar h3{
+        color:#555;
+        font-size:1.5em;
+        margin:1em 0;
+}
+/*************************************
+ +Entry
+ *************************************/
+.entry{
+        margin-bottom:3em;
+}
+.entrybody {
+           font-size: 1.2em;
+}
+
+.entrymeta{
+        font-size:0.9em;
+}
+.postedby{
+        background:#fff url(../images/user.gif) no-repeat;
+        padding:3px;
+        padding-left:20px;
+}
+.filedto{
+        background:#fff url(../images/post.gif) no-repeat;
+        padding:3px;
+        padding-left:20px;
+}
+.commentslink{
+        background:#fff url(../images/packaged.gif) no-repeat;
+        padding:3px;
+        padding-left:20px;
+}
+
+/*************************************
+ +Lists
+ *************************************/
+ul {
+        margin:0;
+        padding:0 0 0 15px;
+}
+#sidebar ul li{
+        margin-bottom:0.1em;
+        padding:0.2em;
+}
+/*************************************
+ +Comments
+ *************************************/
+.commentsblock{
+        margin:0.5em;
+        padding:1em;
+
+}
+.commentsblock textarea{
+        width:35em;
+}
+.commentsblock input, .commentsblock textarea{
+        border:1px solid #d1d1d1;
+}
+.commentsblock textarea:focus{
+        background:#eee;
+        border:1px solid #a1a1a1;
+}
+.commentsblock textarea:focus, .commentsblock input:focus{
+        background:#eee;
+        border:1px solid #a1a1a1;
+}
+.commentauthor{
+        display:block;
+        font-size:1.5em;
+}
+ol.commentlist{
+        color:#777;
+        font-size:0.9em;
+        list-style-type:none;
+        margin:0;
+        margin-top:1.5em;
+        padding:0;
+}
+.commentlist li{
+        margin-bottom:0.5em;
+        padding:0.5em 1em;
+}
+.alt{
+        background:#f3f5e9;
+        border:1px dotted #d1d1d1;
+        padding:0.5em;
+}
+h3#comments{
+font-size:1.6em;
+}
+
+/*************************************
+ +Misc
+ *************************************/
+a{
+        color:#579;
+        text-decoration:none;
+}
+a:hover{
+        color:#CC0000;
+}
+
+.floatright {
+        float: right;
+        margin:-2px 0 0 5px;
+}
+
+
+.CodeRay {
+  font-family: 'Courier New', 'Terminal', monospace;
+  font-size: 0.8em;
+}
+.CodeRay pre { margin: 0px; }
+
+div.CodeRay { }
+
+span.CodeRay { white-space: pre; border: 0px; padding: 2px; }
+
+table.CodeRay { border-collapse: collapse; width: 100%; padding: 2px; }
+table.CodeRay td { padding: 2px 4px; vertical-align: top; }
+
+.CodeRay .line_numbers, .CodeRay .no {
+  color: gray;
+  text-align: right;
+}
+.CodeRay .line_numbers tt { font-weight: bold; }
+.CodeRay .no { padding: 0px 4px; }
+.CodeRay .code { width: 100%; }
+
+ol.CodeRay { font-size: 10pt; }
+ol.CodeRay li { white-space: pre; }
+
+.CodeRay .code pre { overflow: auto; }
+
+
+.af { color:#00C; }
+.an { color:#007; }
+.av { color:#700; }
+.aw { color:#C00; }
+.bi { color:#509; font-weight:bold; }
+.c  { color:#666; }
+
+.ch { color:#88F; }
+.ch .k { color:#04D; }
+.ch .dl { color:#039; }
+
+.cl { color:#e9e; font-weight:bold; }
+.co { color:#5ED; font-weight:bold; }
+.cr { color:#0A0; }
+.cv { color:#ccf; }
+.df { color:#099; font-weight:bold; }
+.di { color:#088; font-weight:bold; }
+.dl { color:black; }
+.do { color:#970; }
+.ds { color:#D42; font-weight:bold; }
+.e  { color:#666; font-weight:bold; }
+.er { color:#F00; background-color:#FAA; }
+.ex { color:#F00; font-weight:bold; }
+.fl { color:#60E; font-weight:bold; }
+.fu { color:#5ed; font-weight:bold; }
+.gv { color:#f84; }
+.hx { color:#058; font-weight:bold; }
+.i  { color:#66f; font-weight:bold; }
+.ic { color:#B44; font-weight:bold; }
+.il { }
+.in { color:#B2B; font-weight:bold; }
+.iv { color:#aaf; }
+.la { color:#970; font-weight:bold; }
+.lv { color:#963; }
+.oc { color:#40E; font-weight:bold; }
+.on { color:#000; font-weight:bold; }
+.op { }
+.pc { color:#08f; font-weight:bold; }
+.pd { color:#369; font-weight:bold; }
+.pp { color:#579; }
+.pt { color:#66f; font-weight:bold; }
+.r  { color:#5de; font-weight:bold; }
+
+.rx { background-color:#221133; }
+.rx .k { color:#f8f; }
+.rx .dl { color:#f0f; }
+.rx .mod { color:#f0b; }
+.rx .fu  { color:#404; font-weight: bold; }
+
+
+.s  .k { color:#F88; }
+.s  .dl { color:#f55; }
+
+.sh { background-color:#f0fff0; }
+.sh .k { color:#2B2; }
+.sh .dl { color:#161; }
+
+.sy { color:#Fc8; }
+.sy .k { color:#Fc8; }
+.sy .dl { color:#F84; }
+
+.ta { color:#070; }
+.tf { color:#070; font-weight:bold; }
+.ts { color:#D70; font-weight:bold; }
+.ty { color:#339; font-weight:bold; }
+.v  { color:#036; }
+.xt { color:#444; }
