@@ -1,0 +1,17 @@
+This repository is a central spot for all themes available for the
+blogging software mephisto.
+
+Mephisto is a very nice blogging software but it lacks the amount
+of themes that e.g. Wordpress has.
+
+== Contributing
+
+If you want to add your themes, drop me a mail "mailto:tomk32@gmx.de":tomk32@gmx.de
+and I'll grant you write access here.
+
+If you prefer to maintain your own repository I'd be happy to pull from that.
+
+== Themes
+
+* Ananasblau by TomK32
+* Skyeyeliner by TomK32
